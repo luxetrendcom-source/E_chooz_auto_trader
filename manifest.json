@@ -1,0 +1,10 @@
+{
+  "name": "E_CHOOZ AUTO TRADER",
+  "short_name": "E_CHOOZ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080d0c",
+  "theme_color": "#080d0c",
+  "description": "Demo market analysis and paper trading workspace.",
+  "icons": []
+}

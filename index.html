@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080d0c">
+  <meta name="description" content="E_CHOOZ AUTO TRADER — Powered by TradeMate AI. Demo market analysis and paper trading.">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
+  <title>E_CHOOZ AUTO TRADER</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">E</div>
+      <div class="brand-copy"><strong>E_CHOOZ <span>AUTO TRADER</span></strong><small>POWERED BY TRADEMATE AI</small></div>
+      <div class="demo-pill"><i></i> DEMO</div>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <div><p class="eyebrow">YOUR TRADING WORKSPACE</p><h1>Market overview</h1><p class="muted">Explore markets and practise with virtual funds.</p></div>
+        <div class="avatar">EC</div>
+      </section>
+
+      <section class="balance-card">
+        <div class="balance-top"><span>VIRTUAL ACCOUNT BALANCE</span><span class="live-label"><i></i> PAPER MODE</span></div>
+        <div class="balance-value" id="balance">$10,000.00</div>
+        <div class="balance-bottom"><span>Demo funds only</span><span id="pnl" class="positive">+$0.00 today</span></div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card"><span>OPEN DEMO TRADES</span><strong id="open-count">0</strong><small>Paper positions</small></article>
+        <article class="stat-card"><span>WATCHLIST</span><strong>6</strong><small>Popular FX pairs</small></article>
+      </section>
+
+      <section class="section-heading"><div><p class="eyebrow">GLOBAL FX</p><h2>Market watch</h2></div><span class="tag">SAMPLE DATA</span></section>
+      <section class="market-list" id="market-list"></section>
+
+      <section class="section-heading"><div><p class="eyebrow">PRACTICE ONLY</p><h2>Quick paper trade</h2></div></section>
+      <section class="trade-card">
+        <label for="pair">Currency pair</label>
+        <select id="pair">
+          <option>EUR/USD</option><option>GBP/USD</option><option>USD/JPY</option>
+          <option>USD/CHF</option><option>AUD/USD</option><option>USD/CAD</option>
+        </select>
+        <label for="direction">Practice direction</label>
+        <div class="direction-row"><button class="direction active" data-side="BUY">BUY / LONG</button><button class="direction" data-side="SELL">SELL / SHORT</button></div>
+        <label for="amount">Virtual position size (USD)</label>
+        <input id="amount" type="number" min="1" max="1000" step="1" value="100">
+        <button class="primary-btn" id="place-trade">Place demo trade</button>
+        <p class="fine-print">This starter app uses illustrative sample prices. No broker is connected and no real orders are sent.</p>
+      </section>
+
+      <section class="section-heading"><div><p class="eyebrow">YOUR ACTIVITY</p><h2>Demo trade history</h2></div></section>
+      <section id="history" class="history-card"><p class="muted empty">No demo trades yet. Try a paper trade above.</p></section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <a class="nav-item selected" href="#top" data-tab="Home"><span>⌂</span>Home</a>
+      <a class="nav-item" href="#market-list" data-tab="Markets"><span>⌁</span>Markets</a>
+      <a class="nav-item" href="#trade-card" data-tab="Practice"><span>⇄</span>Practice</a>
+      <a class="nav-item" href="#history" data-tab="Portfolio"><span>▤</span>Portfolio</a>
+    </nav>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
